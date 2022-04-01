@@ -16,5 +16,5 @@ jobs:
     - name: Install-Cppcheck
       run: sudo apt-get install cppcheck
       -name: Analysis
-      run: cppcheck --enableall 3_Implementation
+      run: cppcheck --enable  3_Implementation/voting_sysyem.c
   
