@@ -5,7 +5,7 @@
 
 
 Build:
-	gcc voting_system.c -Iunity
+	gcc voting_system.c
 
 Run:
 	./a.out
