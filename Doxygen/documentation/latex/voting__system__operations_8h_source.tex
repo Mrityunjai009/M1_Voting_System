@@ -1,0 +1,188 @@
+\hypertarget{voting__system__operations_8h_source}{}\doxysection{voting\+\_\+system\+\_\+operations.\+h}
+\label{voting__system__operations_8h_source}\index{B:/project local repo/M1\_Voting\_System/Doxygen/inc/voting\_system\_operations.h@{B:/project local repo/M1\_Voting\_System/Doxygen/inc/voting\_system\_operations.h}}
+\mbox{\hyperlink{voting__system__operations_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef \_\_VOTING\_SYSTEM\_OPERATIONS\_H\_\_}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define \_\_VOTING\_SYSTEM\_OPERATIONS\_H\_\_}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{32 \textcolor{keywordtype}{int} \mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}}=0, congress=0, aap=0, bsp=0;}
+\DoxyCodeLine{33 \textcolor{keywordtype}{void} electionResult()}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35 \textcolor{comment}{    /*****************************************************************************************************}}
+\DoxyCodeLine{36 \textcolor{comment}{     * @brief }}
+\DoxyCodeLine{37 \textcolor{comment}{     * This if else statements is going to perform mazor roll to put output }}
+\DoxyCodeLine{38 \textcolor{comment}{     * and going to show by how many  points a party wins with respect to another }}
+\DoxyCodeLine{39 \textcolor{comment}{     * party}}
+\DoxyCodeLine{40 \textcolor{comment}{     */}}
+\DoxyCodeLine{41     \textcolor{keywordtype}{int} wonByVote;}
+\DoxyCodeLine{42     \textcolor{keywordflow}{if} (\mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}} > congress \&\& \mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}} > aap \&\& \mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}} > bsp)}
+\DoxyCodeLine{43     \{}
+\DoxyCodeLine{44         printf(\textcolor{stringliteral}{"{}\(\backslash\)nBharatiya Janata Party(BJP) have maximux score in election\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{45         printf(\textcolor{stringliteral}{"{}Total vote of Bharatiya Janata Party(BJP): \%d\(\backslash\)n"{}},\mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}});}
+\DoxyCodeLine{46         wonByVote=\mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}}-\/congress;}
+\DoxyCodeLine{47         printf(\textcolor{stringliteral}{"{}Bharatiya Janata Party(BJP) won by \%d votes to Congress\(\backslash\)n"{}},wonByVote);}
+\DoxyCodeLine{48         wonByVote=\mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}}-\/aap;}
+\DoxyCodeLine{49         printf(\textcolor{stringliteral}{"{}Bharatiya Janata Party(BJP) won by \%d votes to AAP\(\backslash\)n"{}},wonByVote);}
+\DoxyCodeLine{50         wonByVote=\mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}}-\/bsp;}
+\DoxyCodeLine{51         printf(\textcolor{stringliteral}{"{}Bharatiya Janata Party(BJP) won by \%d votes to BSP\(\backslash\)n"{}},wonByVote);}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (congress > aap \&\& congress > bsp)}
+\DoxyCodeLine{54     \{}
+\DoxyCodeLine{55         printf(\textcolor{stringliteral}{"{}\(\backslash\)nCongress party have maximum score in election\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{56         printf(\textcolor{stringliteral}{"{}Total vote of Congress : \%d\(\backslash\)n"{}},congress);}
+\DoxyCodeLine{57         wonByVote=congress-\/\mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}};}
+\DoxyCodeLine{58         printf(\textcolor{stringliteral}{"{}Congress won by \%d votes to Bharatiya Janata Party(BJP)\(\backslash\)n"{}},wonByVote);}
+\DoxyCodeLine{59         wonByVote=congress-\/aap;}
+\DoxyCodeLine{60         printf(\textcolor{stringliteral}{"{}Congress won by \%d votes to AAP\(\backslash\)n"{}},wonByVote);}
+\DoxyCodeLine{61         wonByVote=congress-\/bsp;}
+\DoxyCodeLine{62         printf(\textcolor{stringliteral}{"{}Congress won by \%d votes to BSP\(\backslash\)n"{}},wonByVote);}
+\DoxyCodeLine{63     \}}
+\DoxyCodeLine{64     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (aap > bsp)}
+\DoxyCodeLine{65     \{}
+\DoxyCodeLine{66         printf(\textcolor{stringliteral}{"{}\(\backslash\)nAam Aadmi Party(AAP)  have maximum score in election\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{67         printf(\textcolor{stringliteral}{"{}Total vote of AAP : \%d\(\backslash\)n"{}},aap);}
+\DoxyCodeLine{68         wonByVote=aap-\/congress;}
+\DoxyCodeLine{69         printf(\textcolor{stringliteral}{"{}Aam Aadmi Party(AAP)  won by \%d votes to Congress\(\backslash\)n"{}},wonByVote);}
+\DoxyCodeLine{70         wonByVote=aap-\/\mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}};}
+\DoxyCodeLine{71         printf(\textcolor{stringliteral}{"{}Aam Aadmi Party(AAP)  won by \%d votes to BJP\(\backslash\)n"{}},wonByVote);}
+\DoxyCodeLine{72         wonByVote=aap-\/bsp;}
+\DoxyCodeLine{73         printf(\textcolor{stringliteral}{"{}Aam Aadmi Party(AAP)  won by \%d votes to BSP\(\backslash\)n"{}},wonByVote);}
+\DoxyCodeLine{74     \}}
+\DoxyCodeLine{75 \textcolor{comment}{    /*********************************************************************************************************}}
+\DoxyCodeLine{76 \textcolor{comment}{     * @brief }}
+\DoxyCodeLine{77 \textcolor{comment}{     * Now here is the new and important feature is going to run which will say that if two or more }}
+\DoxyCodeLine{78 \textcolor{comment}{     * parties having same voting score, if not then this statements is not gonna appear }}
+\DoxyCodeLine{79 \textcolor{comment}{     * *******************************************************************************************************}}
+\DoxyCodeLine{80 \textcolor{comment}{     */}}
+\DoxyCodeLine{81      \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}} == congress || \mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}} == aap || \mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}} == bsp || bsp == congress || congress == aap || bsp == aap)}
+\DoxyCodeLine{82     \{}
+\DoxyCodeLine{83         printf(\textcolor{stringliteral}{"{}\(\backslash\)n some parties having same illection score\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{84         printf(\textcolor{stringliteral}{"{}            Bharatiya Janata Party(BJP)-\/-\/-\/Congress-\/-\/-\/Aaam Aadmi Party-\/-\/-\/Bahujan Samaj Party (BSP)\(\backslash\)n"{}});}
+\DoxyCodeLine{85         printf(\textcolor{stringliteral}{"{}Total Vote   \%d       \%d        \%d     \%d\(\backslash\)n"{}},\mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}},congress,aap,bsp);}
+\DoxyCodeLine{86     \}}
+\DoxyCodeLine{87 \textcolor{comment}{    /*********************************************************************************************************}}
+\DoxyCodeLine{88 \textcolor{comment}{     * @brief }}
+\DoxyCodeLine{89 \textcolor{comment}{     * this if statements statements tells us that if all parties having exact same voting score }}
+\DoxyCodeLine{90 \textcolor{comment}{     * @return else }}
+\DoxyCodeLine{91 \textcolor{comment}{     * if not then this statement is not going to appear}}
+\DoxyCodeLine{92 \textcolor{comment}{     * ********************************************************************************************************/}}
+\DoxyCodeLine{93     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}} == congress \&\& \mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}} == aap \&\& \mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}} == bsp \&\& bsp == congress)}
+\DoxyCodeLine{94     \{}
+\DoxyCodeLine{95         printf(\textcolor{stringliteral}{"{}\(\backslash\)nAll parties have same election score\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{96         printf(\textcolor{stringliteral}{"{}            Bharatiya Janata Party(BJP)-\/-\/-\/Congress-\/-\/-\/Aaam Aadmi Party-\/-\/-\/Bahujan Samaj Party (BSP)\(\backslash\)n"{}});}
+\DoxyCodeLine{97         printf(\textcolor{stringliteral}{"{}Total Vote   \%d       \%d        \%d     \%d\(\backslash\)n"{}},\mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}},congress,aap,bsp);}
+\DoxyCodeLine{98     \}}
+\DoxyCodeLine{99 \textcolor{comment}{    /***********************************************************************************************************}}
+\DoxyCodeLine{100 \textcolor{comment}{     * @brief }}
+\DoxyCodeLine{101 \textcolor{comment}{     * this else statement is going to tell if Bahujan Samaj Party (BSP) have maximum score in election}}
+\DoxyCodeLine{102 \textcolor{comment}{     * or not then this statement is not going to appear}}
+\DoxyCodeLine{103 \textcolor{comment}{     * **********************************************************************************************************/}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{106     \{}
+\DoxyCodeLine{107         printf(\textcolor{stringliteral}{"{}\(\backslash\)nBahujan Samaj Party (BSP) have maximum score in election\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{108         printf(\textcolor{stringliteral}{"{}Total vote of BSP : \%d\(\backslash\)n"{}},bsp);}
+\DoxyCodeLine{109         wonByVote=bsp-\/congress;}
+\DoxyCodeLine{110         printf(\textcolor{stringliteral}{"{}Bahujan Samaj Party (BSP)won by \%d votes to Congress\(\backslash\)n"{}},wonByVote);}
+\DoxyCodeLine{111         wonByVote=bsp-\/aap;}
+\DoxyCodeLine{112         printf(\textcolor{stringliteral}{"{}Bahujan Samaj Party (BSP) won by \%d votes to AAP\(\backslash\)n"{}},wonByVote);}
+\DoxyCodeLine{113         wonByVote=bsp-\/\mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}};}
+\DoxyCodeLine{114         printf(\textcolor{stringliteral}{"{}Bahujan Samaj Party (BSP) won by \%d votes to BJP\(\backslash\)n"{}},wonByVote);}
+\DoxyCodeLine{115     \}}
+\DoxyCodeLine{116 \}}
+\DoxyCodeLine{117 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{118 \textcolor{comment}{ * @brief }}
+\DoxyCodeLine{119 \textcolor{comment}{ * This is the main part of the program which will calculate to exact values of every party voting }}
+\DoxyCodeLine{120 \textcolor{comment}{ * score and send output as a calculateVote which is working as a function}}
+\DoxyCodeLine{121 \textcolor{comment}{ * ****************************************************************************************************************/}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123 \textcolor{keywordtype}{void} calculateVote(\textcolor{keywordtype}{int} vote)}
+\DoxyCodeLine{124 \{}
+\DoxyCodeLine{125     \textcolor{keywordflow}{switch} (vote)}
+\DoxyCodeLine{126     \{}
+\DoxyCodeLine{127     \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{128         \mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}}+=1;}
+\DoxyCodeLine{129         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{130     \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{131         congress+=1;}
+\DoxyCodeLine{132         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{133     \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{134         aap+=1;}
+\DoxyCodeLine{135         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{136     \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{137         bsp+=1;}
+\DoxyCodeLine{138         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{139     \}}
+\DoxyCodeLine{140 \}}
+\DoxyCodeLine{141 \textcolor{comment}{/*************************************************************************************************************************}}
+\DoxyCodeLine{142 \textcolor{comment}{ * @brief }}
+\DoxyCodeLine{143 \textcolor{comment}{ * This is also a important function and this is used as a checking the upper statements are }}
+\DoxyCodeLine{144 \textcolor{comment}{ * working correctly or not }}
+\DoxyCodeLine{145 \textcolor{comment}{Here i am putting values for votes to check and run program for unit test }}
+\DoxyCodeLine{146 \textcolor{comment}{   i have complete my actual program in single file instead of multifile because it is working same and even more efficientiely}}
+\DoxyCodeLine{147 \textcolor{comment}{    }}
+\DoxyCodeLine{148 \textcolor{comment}{    and to check program  to ignore human needs   put values in this program}}
+\DoxyCodeLine{149 \textcolor{comment}{***************************************************************************************************************************/}}
+\DoxyCodeLine{150 \textcolor{keywordtype}{void} runUnitTest(\textcolor{keywordtype}{int} arr[], \textcolor{keywordtype}{int} n) \{}
+\DoxyCodeLine{151     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i< n; i++)\{}
+\DoxyCodeLine{152         \textcolor{keywordflow}{if}(arr[i]>=6 || arr[i]<=0)\{}
+\DoxyCodeLine{153             printf(\textcolor{stringliteral}{"{}Invalid input"{}});}
+\DoxyCodeLine{154         \}}
+\DoxyCodeLine{155         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(arr[i]==5)\{}
+\DoxyCodeLine{156             electionResult();}
+\DoxyCodeLine{157         \}}
+\DoxyCodeLine{158         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{159             calculateVote(arr[i]);}
+\DoxyCodeLine{160         \}}
+\DoxyCodeLine{161     \}}
+\DoxyCodeLine{162 \}}
+\DoxyCodeLine{163 \textcolor{comment}{ /*****************************************************************************************************************************}}
+\DoxyCodeLine{164 \textcolor{comment}{  * @brief }}
+\DoxyCodeLine{165 \textcolor{comment}{  * Here is the main function of the program which will take input itself and put in the upper}}
+\DoxyCodeLine{166 \textcolor{comment}{  * code to checke its correct output }}
+\DoxyCodeLine{167 \textcolor{comment}{  * ****************************************************************************************************************************/} }
+\DoxyCodeLine{168  }
+\DoxyCodeLine{169 \textcolor{keywordtype}{int} main()}
+\DoxyCodeLine{170 \{}
+\DoxyCodeLine{171     \textcolor{keywordtype}{int} inputSize = 12;}
+\DoxyCodeLine{172     \textcolor{keywordtype}{int} inputArr[] = \{1, 1, 2, 3, 4, 1, 2, 2, 4, 3, 2, 5\}; \textcolor{comment}{//different inputs for testing the program working and errors}}
+\DoxyCodeLine{173     \textcolor{keywordtype}{int} expectedBjp = 3;}
+\DoxyCodeLine{174     \textcolor{keywordtype}{int} expectedCongress = 4;}
+\DoxyCodeLine{175     \textcolor{keywordtype}{int} expectedAap = 2;}
+\DoxyCodeLine{176     \textcolor{keywordtype}{int} expectedBsp = 2;}
+\DoxyCodeLine{177    }
+\DoxyCodeLine{178    }
+\DoxyCodeLine{179    }
+\DoxyCodeLine{180         printf(\textcolor{stringliteral}{"{}\(\backslash\)n               Welcome to the voting system, Please select one  party to vote\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{181         printf(\textcolor{stringliteral}{"{}              Madhya pradesh election                        \(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{182         printf(\textcolor{stringliteral}{"{}                       1.Bharatiya Janata Party(BJP)   \(\backslash\)n"{}});}
+\DoxyCodeLine{183         printf(\textcolor{stringliteral}{"{}                       2.Congress Party \(\backslash\)n"{}});}
+\DoxyCodeLine{184         printf(\textcolor{stringliteral}{"{}                       3.Aam Aadmi Party(AAP)  \(\backslash\)n"{}});}
+\DoxyCodeLine{185         printf(\textcolor{stringliteral}{"{}                       4.Bahujan Samaj Party (BSP)\(\backslash\)n"{}});}
+\DoxyCodeLine{186        }
+\DoxyCodeLine{187         printf(\textcolor{stringliteral}{"{}Press 1 to vote Bharatiya Janata Party(BJP)\(\backslash\)n"{}});}
+\DoxyCodeLine{188         printf(\textcolor{stringliteral}{"{}Press 2 to vote Congress\(\backslash\)n"{}});}
+\DoxyCodeLine{189         printf(\textcolor{stringliteral}{"{}Press 3 to vote APP\(\backslash\)n"{}});}
+\DoxyCodeLine{190         printf(\textcolor{stringliteral}{"{}Press 4 to vote BSP\(\backslash\)n"{}});}
+\DoxyCodeLine{191         printf(\textcolor{stringliteral}{"{}Press 5 to show election result\(\backslash\)n"{}});}
+\DoxyCodeLine{192         printf(\textcolor{stringliteral}{"{}Please choose : "{}});}
+\DoxyCodeLine{193    runUnitTest(inputArr, inputSize);}
+\DoxyCodeLine{194 \textcolor{comment}{   /*********************************************************************************************************************************}}
+\DoxyCodeLine{195 \textcolor{comment}{    * @attention }}
+\DoxyCodeLine{196 \textcolor{comment}{    * This if else statement is the  part of auto checking upper code which tells us that the output and check }}
+\DoxyCodeLine{197 \textcolor{comment}{    * and if the output  not comes is expected this if else statement and function directly send information }}
+\DoxyCodeLine{198 \textcolor{comment}{    * and print that this program is not working correctly }}
+\DoxyCodeLine{199 \textcolor{comment}{    * ******************************************************************************************************************************/}}
+\DoxyCodeLine{200    \textcolor{keywordflow}{if}(bsp == expectedBsp \&\& \mbox{\hyperlink{voting__system__operations_8h_a5fff4ea859a4e74960ee96fa8f7a0261}{bjp}} == expectedBjp \&\& aap == expectedAap \&\& congress == expectedCongress)}
+\DoxyCodeLine{201    printf(\textcolor{stringliteral}{"{}The unit test passed\(\backslash\)n"{}});}
+\DoxyCodeLine{202    \textcolor{keywordflow}{else}}
+\DoxyCodeLine{203    printf(\textcolor{stringliteral}{"{}The unit test failed"{}});}
+\DoxyCodeLine{204    }
+\DoxyCodeLine{205      }
+\DoxyCodeLine{206    }
+\DoxyCodeLine{207     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{208 \}}
+
+\end{DoxyCode}
